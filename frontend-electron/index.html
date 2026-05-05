@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Stock Manager Pro</h1>
+        
+        <div class="card">
+            <h3>Ajouter un Produit</h3>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Nom du produit">
+                <input type="number" id="price" placeholder="Prix (€)" min="0" step="0.01">
+                <input type="number" id="quantity" placeholder="Quantité" min="0">
+                <button class="btn-add" id="btn-save" onclick="saveProduct()">Ajouter</button>
+                <button id="btn-cancel" onclick="cancelEdit()" style="display: none; background-color: #6c757d; color: white;">Annuler</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0;">Liste des Produits</h3>
+                <input type="text" id="search-input" placeholder="🔍 Rechercher..." onkeyup="fetchProducts()" style="max-width: 250px;">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Les produits s'afficheront ici -->
+                </tbody>
+            </table>
+        </div>
+        <div id="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+            <button id="prev-page" onclick="changePage(-1)" style="background: #2d4059; color: white;">Précédent</button>
+            <span id="page-info" style="align-self: center;">Page 1</span>
+            <button id="next-page" onclick="changePage(1)" style="background: #2d4059; color: white;">Suivant</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

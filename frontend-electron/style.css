@@ -1,0 +1,82 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --accent-color: #4ecca3;
+    --text-color: #eeeeee;
+    --danger-color: #e94560;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+input {
+    background: #0f3460;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    flex: 1;
+    min-width: 150px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-add { background-color: var(--accent-color); color: var(--bg-color); }
+.btn-add:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(78, 204, 163, 0.4); }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #2d4059;
+}
+
+th { color: var(--accent-color); }
+
+.btn-delete { background-color: var(--danger-color); color: white; padding: 5px 10px; font-size: 12px; }
+.btn-edit { background-color: #fca311; color: white; padding: 5px 10px; font-size: 12px; margin-right: 5px; }
